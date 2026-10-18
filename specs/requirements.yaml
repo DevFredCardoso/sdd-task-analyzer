@@ -1,0 +1,11 @@
+# Resumo do contrato do SDD (seção 1.3). Documentação apenas: não é lido pelo código.
+modulo: TaskAnalyzer
+python_minimo: "3.11"
+dependencias_autorizadas: [biblioteca padrão, pytest]
+entrada:
+  tarefa: [id_tarefa, titulo, prioridade, data_criacao, data_inicio, data_conclusao, prazo, status]
+  prioridades: [baixa, media, alta]
+  status: [concluida, pendente, cancelada]
+saida: [tempo_medio_conclusao_min, taxa_atraso_percentual, quantidade_tarefas, indicadores_por_prioridade]
+excecao: TarefaInvalidaError
+cenarios: [sucesso, excecao, colecao_vazia]
